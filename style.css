@@ -1,0 +1,341 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Share Tech", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 10px;
+}
+.container{
+    background-image: url("photo.jpg");
+    background-size: cover;
+    height:100vh;
+}
+.menu{
+    height:100vh;
+    width:300px;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    left: -330px;
+    transition: left 0.5s linear 0s,opactiy 1s linear 0s;
+    box-shadow: 1px 0 2px white;
+
+}
+.hb{
+    height:40px;
+    width:40px;
+    position: absolute;
+    top:15px;
+    left:10px;
+    z-index:2;
+}
+.hb i{
+    color:white;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+}
+#x{
+   position:absolute; 
+   top:13px;
+   left:18px;
+   display: none;
+}
+.head{
+    width:100%;
+    height:80px;
+    box-shadow: 2px 0 4px white;
+    margin-bottom: 30px;
+}
+.name{
+    color:white;
+    height:60px;
+    width:330px;
+    font-size: 28px;
+    padding:25px 20px;
+    position: absolute;
+}
+.cross i{
+    color:gray;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    position:absolute;
+    right:10px;
+    top:10px;
+}
+.a,.b,.c,.d,.e,.f,.g{
+    width:100%;
+    height:65px;
+    color: white;
+    opacity: 0.5;
+}
+a{
+    color:white;
+    font-size: 22px;
+    text-decoration: none;
+    margin-left:20px;
+}
+.head~div:hover{
+    box-shadow: 2px 0 4px white;
+    opacity:1;
+}
+.head~label div:hover{
+    box-shadow: 2px 0 4px white;
+    opacity:1;
+}
+.head~div i{
+    margin:20px;
+}
+.social{
+    position: absolute;
+    bottom:20px;
+    margin-left:10px;
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: row;
+    margin-left:25px;
+    width: 150px;
+}
+.social a {
+    margin: 0px;
+    font-size: 15px;
+    padding:0px !important;
+    width:100px !important;
+}
+.social i{
+    opacity:0.5;
+}
+.social i:hover{
+    opacity: 1;
+    transform: scale(1.5);
+}
+#x:checked ~ .menu{
+    left:0px;
+}
+#x:checked ~ .hb i{
+    opacity: 0 !important;
+}
+label div i,a{
+    margin:20px;
+}
+#y{
+    display: none;
+} 
+.popup{
+    background-color: rgba(255,255,255,0);
+    width: 520px;
+    height: 520px;
+    position: absolute;
+    top:100px;
+    left:33%;
+    padding: 0;
+    opacity: 0;
+    transition: 1s opacity ease-in 0s;
+}
+.popup div{
+    background-color: rgba(255,255,255,0);
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin:0;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    animation: rot 5s linear 0s infinite normal;
+}
+#b{
+    background-image: url("photo.jpg");
+    background-size: cover;
+    grid-row:2/4;
+    grid-column: 2/4;
+}
+#c{
+    background-image: url("a.jpg");
+    background-size: cover;
+}
+#d{
+    background-image: url("b.jpg");
+    background-size: cover;
+}
+#e{
+    background-image: url("c.jpg");
+    background-size: cover;
+}
+#f{
+    background-image: url("d.jpg");
+    background-size: cover;
+}
+#g{
+    background-image: url("e.jpg");
+    background-size: cover;
+}
+#h{
+    background-image: url("f.jpg");
+    background-size: cover;
+}
+#i{
+    background-image: url("g.jpg");
+    background-size: cover;
+}
+#j{
+    background-image: url("h.jpg");
+    background-size: cover;
+}
+#k{
+    background-image: url("i.jpg");
+    background-size: cover;
+}
+#l{
+    background-image: url("j.jpg");
+    background-size: cover;
+}
+#m{
+    background-image: url("k.jpg");
+    background-size: cover;
+}
+#n{
+    background-image: url("l.jpg");
+    background-size: cover;
+}
+.y div{
+    border-radius: 50%;
+    box-shadow: 0 0 4px white;
+    animation: anti 5s linear 0s infinite normal;
+}
+@keyframes rot {
+    0%{
+            transform: rotate(0deg);
+    }
+    50%{
+            transform: rotate(180deg);
+    }
+    100%{
+            transform: rotate(360deg);
+    }
+}
+@keyframes anti {
+    0%{
+            transform: rotate(0deg);
+    }
+    50%{
+            transform: rotate(-180deg);
+    }
+    100%{
+            transform: rotate(-360deg);
+    }
+}
+.popup ~ #p i{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    right:10px;
+    opacity: 0;
+    transition: opacity 1s ease-in 0s;
+}
+#y:checked ~ .menu{
+    opacity:0;
+}
+#y:checked ~ .popup{
+    opacity: 1;
+}
+#y:checked ~ #p i{
+    opacity: 1;
+}
+#z:checked ~ .menu{
+    display: none;
+}
+#z:checked ~ .calender{
+    opacity: 1;
+}
+#z:checked ~ #w i{
+    opacity: 1;
+}
+.calender{
+    background-color:   white;
+    width: 690px;
+    height: 600px;
+    position: absolute;
+    top:30px;
+    left:27%;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in 0s;
+}
+.cal{
+    background-color: black;
+    width: 690px;
+    height: 456px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-gap:1px 1px;
+    place-items: start;
+    
+}
+.cal div{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 1px;
+}
+.calender ~ label i{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    right:10px;
+    top:50px;
+    opacity: 0;
+    transition: opacity 1s ease-in 0s;
+}
+#z{
+    display: none;
+}
+.feedback{
+    height: 300px;
+    width: 900px;
+    position:absolute;
+    top: 200px;
+    left:400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(255,255,255,0);
+    opacity: 0;
+}
+#u{
+    display: none;
+}
+.la{
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 0 0 2px white;
+    height: 150px;
+    width: 825px;
+    font-size:50px;
+    padding-top: 50px;
+    padding-left: 75px;
+    opacity: 0.8;
+}
+.sm{
+    width: 180px;
+    height: 100px;
+}
+.sm i{
+    font-size: 70px;
+    margin-top:15px;
+    margin-left:40px;
+    color: white;
+    background-color: rgba(255,255,255,0);
+}
+#u:checked ~ .menu{
+    display: none;
+}
+#u:checked ~ .feedback{
+    opacity: 1;
+}
+#u:checked ~ #feed i{
+    opacity: 1;
+}
+
+
+
